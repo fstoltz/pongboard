@@ -1,6 +1,17 @@
-# pongboard
-A website to keep track of Ping Pong scores
+# Ping Pong Scoreboard
 
-First change
+#### Desired features
+- View scoreboard
+- Edit score for person
+- Add person
 
-asd
+**Implementation**<br>For storing the scoreboard values -> *SQLite*<br>Serverside -> *Node*
+
+
+**URL's**<br>/index (SELECT * FROM scoreboard)<br>/upsert/{name}/{score}
+
+
+|todo|status  |
+|--|--|
+|  |  |
+
