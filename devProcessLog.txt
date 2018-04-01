@@ -1,0 +1,8 @@
+2/4
+Starting to get a grip of the way Node is setup, with help from the Express library. The issue at the moment is that I'm not able to successfully
+implement "SELECT * from tableName" functionality, that would display all rows embedded in an html file or something similar.
+I'm able to grab the data from the table in the SQLite database and console.log it, but when trying to for example iteratively build a string
+containing the results, I get no output at the html page. I'm suspecting that this has to do with the fact that Node runs
+asynchronously and something isn't happening in the right order. It could also just be because I'm not using JavaScript namespaces properly and
+not building the string correctly and handling the return statements in the correct fashion, whether it's Call by Value / Reference etc. I'm not sure.
+I'll have to look further into this issue before heading onto other tasks.
