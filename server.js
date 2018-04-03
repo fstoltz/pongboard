@@ -12,13 +12,16 @@ app.set("view engine", "pug");
 app.set("views", secret.viewspath);
 
 
+var con = mysql.createConnection({
+	host: secret.host,
+	user: secret.user,
+	password: secret.password,
+	database: "ponglogs"
+});
+
+
 function insert(name, score){
-	var con = mysql.createConnection({
-		host: secret.host,
-		user: secret.user,
-		password: secret.password,
-		database: "ponglogs"
-	});
+
 
 	con.connect(function(err) {
 		if (err) throw err;
@@ -34,13 +37,6 @@ function insert(name, score){
 
 app.post('/update', function(req, res, next){
 	console.log(req.body);
-	var con = mysql.createConnection({
-		host: secret.host,
-		user: secret.user,
-		password: secret.password,
-		database: "ponglogs"
-	});
-
 
 	con.connect(function(err) {
 		if (err) throw err;
@@ -58,12 +54,7 @@ app.post('/update', function(req, res, next){
 
 
 app.get('/', function (req, res) {
-	var con = mysql.createConnection({
-		host: secret.host,
-		user: secret.user,
-		password: secret.password,
-		database: "ponglogs"
-	});
+
 	var arr = [];
 	con.connect(function(err) {
 	  if (err) throw err; 
