@@ -35,9 +35,9 @@ function insert(name, score){
 app.post('/update', function(req, res, next){
 	console.log(req.body);
 	var con = mysql.createConnection({
-		host: "localhost",
-		user: "root",
-		password: "nacka17",
+		host: secret.host,
+		user: secret.user,
+		password: secret.password,
 		database: "ponglogs"
 	});
 
@@ -65,10 +65,10 @@ app.get('/update', function (req, res) {
 
 app.get('/', function (req, res) {
 	var con = mysql.createConnection({
-		  host: "localhost",
-		  user: "root",
-		  password: "nacka17",
-		  database: "ponglogs"
+		host: secret.host,
+		user: secret.user,
+		password: secret.password,
+		database: "ponglogs"
 	});
 	var arr = [];
 	con.connect(function(err) {
