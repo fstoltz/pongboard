@@ -9,7 +9,7 @@ app.use(bodyParser.json()); // for parsing application/json
 
 app.engine('pug', require('pug').__express)
 app.set("view engine", "pug");
-app.set("views", "C:\\Users\\fstoltz\\Resources\\gitRepos\\pongboard\\views");
+app.set("views", secret.viewspath);
 
 
 function insert(name, score){
@@ -59,7 +59,7 @@ app.post('/update', function(req, res, next){
 
 app.get('/update', function (req, res) {
 	res.render('update');
-	res.sendFile("C:\\Users\\fstoltz\\Resources\\gitRepos\\pongboard\\update.html");
+	res.sendFile(secret.updatehtmlfilepath);
 });
 
 
