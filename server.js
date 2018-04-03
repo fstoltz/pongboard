@@ -2,6 +2,7 @@ var express = require('express')
 var app = express()
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
+var secret = require('C:\\Users\\fstoltz\\Resources\\gitRepos\\pongboard\\secret.js');
 
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(bodyParser.json()); // for parsing application/json
@@ -13,9 +14,9 @@ app.set("views", "C:\\Users\\fstoltz\\Resources\\gitRepos\\pongboard\\views");
 
 function insert(name, score){
 	var con = mysql.createConnection({
-		host: "localhost",
-		user: "root",
-		password: "nacka17",
+		host: secret.host,
+		user: secret.user,
+		password: secret.password,
 		database: "ponglogs"
 	});
 
