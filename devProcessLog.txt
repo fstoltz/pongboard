@@ -1,3 +1,20 @@
+3/4
+So now I've got something working atleast, I finally managed to sort out the SQL query. I've switched from SQLite to MySQL. I'm not sure if that's where the issue was
+but it's different libraries for each of them so it is probable. Anyhow.. I'm happy that I have it up and running now, and I've successfully transferred the
+website and installed MySQL on my hosting machine, and it seems be working alright for now. Though I was forced to use sudo in order to attach node
+to port 80, I read there's ways of getting the same result without running it as root and I'll have a look into that. I'm using tmux to keep the process running
+after I logout from the ssh session. At the moment there's some pieces of code that I copied, I'll have a closer look into them so I understand how they work.
+One thing I'd like to fix is so that the order is from highest score -> lowest score order on the page, using ORDER BY doesn't seem to work, might have something
+to do with how I render it using jade/pug. It might be a good idea to have some sort of password check for users trying to edit the scoreboard.
+Functionality that I'd like to implement is:
+- Fix the order of the scoreboard
+- Setup the app as a VirtualHost using Apache(proxy it). Now it's running by itself.
+- Setup SSL? (low priority)
+- Change the looks of the site, setup a proper css file
+- Street-cred variable?
+- hmm
+
+
 2/4
 Starting to get a grip of the way Node is setup, with help from the Express library. The issue at the moment is that I'm not able to successfully
 implement "SELECT * from tableName" functionality, that would display all rows embedded in an html file or something similar.
