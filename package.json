@@ -1,0 +1,15 @@
+{
+  "name": "express-parameters",
+  "main": "server.js",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "ejs": "^2.5.8",
+    "express": "~4.10.2",
+    "mysql": "^2.15.0",
+    "nodemon": "^1.17.3",
+    "pug": "^2.0.3",
+    "sqlite": "^2.9.1",
+    "sqlite3-promise": "^1.0.3",
+    "sync": "^0.2.5"
+  }
+}
