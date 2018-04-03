@@ -1,8 +1,16 @@
-</div>
-	<h1>Update Scoreboard</h1>
+
+<head>
+  <title>Ping Pong</title>
+</head>
+
+<body>
+  <div class="container">
 		<form action='http://localhost:8080/update' method='POST' enctype='application/json'>
-  			Name: <input name='name' type='text'><br>
-  			Score: <input name='score' type='text'><br>
-  			<input type='submit' name='Submit'>
+  			<label>Name:</label><input name='name' type='text' placeholder="ex. Hampa"><br>
+  			<label>Score:</label><input name='score' type='text' placeholder="ex. 10"><br>
+  			</label><input type='submit' name='Submit' value="Submit" id="submitbutton">
 		</form>
-</div>
+  </div>
+</body>
+
+</html>

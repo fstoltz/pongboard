@@ -1,0 +1,38 @@
+* {
+	text-align: center;
+	background-color: black;
+	color: white;
+	font-family: "Papyrus Regular";
+}
+
+p {
+	font-size: 1.09em;
+}
+
+h3 {
+	color: #ff4d4d;
+}
+
+
+
+.container {
+	margin-left: 44%;
+	width: 125px;
+	/*clear: both;*/
+}
+
+.container input {
+	width: 100%;
+	border: 5px 5px 0px;
+	border-color: black;
+	border-radius: 4px;
+	box-shadow: 0px 0px 70px red;
+	/*clear: both;*/
+}
+
+#submitbutton {
+	color: red;
+	margin-top: 10px;
+	font-family: "Chiller Regular";
+	font-size: 1.3em;
+}

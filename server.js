@@ -77,7 +77,7 @@ app.get('/', function (req, res) {
 			Object.keys(result).forEach(function(key) {
 				var row = result[key];
 	  			console.log(row.name)
-	  			arr.push((row.name + " - " +row.score))
+	  			arr.push((row.name +" - "+row.score))
 		    });
 		 	res.render('homepage', {scorelist: arr});
 	  });
