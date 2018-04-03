@@ -2,7 +2,7 @@ var express = require('express')
 var app = express()
 var bodyParser = require('body-parser');
 var mysql = require('mysql');
-var secret = require('C:\\Users\\fstoltz\\Resources\\gitRepos\\pongboard\\secret.js');
+var secret = require('/home/lati/nodestuff/pongboard/secret.js');
 
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(bodyParser.json()); // for parsing application/json
@@ -57,12 +57,6 @@ app.post('/update', function(req, res, next){
 });
 
 
-app.get('/update', function (req, res) {
-	res.render('update');
-	res.sendFile(secret.updatehtmlfilepath);
-});
-
-
 app.get('/', function (req, res) {
 	var con = mysql.createConnection({
 		host: secret.host,
@@ -87,4 +81,4 @@ app.get('/', function (req, res) {
 
 
 
-app.listen(8080)
+app.listen(80)
